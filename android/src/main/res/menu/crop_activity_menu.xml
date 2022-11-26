@@ -21,7 +21,7 @@
     <!--        android:icon="@drawable/ic_reset_colors"/>-->
 
 
-    <group
+<!--     <group
         android:id="@+id/enhance_group"
         android:checkableBehavior="single">
         <item
@@ -32,5 +32,5 @@
             android:id="@+id/reset"
             android:icon="@drawable/ic_reset_colors"
             android:title="@string/reset" />
-    </group>
+    </group> -->
 </menu>
