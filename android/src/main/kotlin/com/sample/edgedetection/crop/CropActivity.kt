@@ -57,14 +57,14 @@ class CropActivity : BaseActivity(), ICropView.Proxy {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.crop_activity_menu, menu)
 
-        menu.setGroupVisible(R.id.enhance_group, showMenuItems)
+//         menu.setGroupVisible(R.id.enhance_group, showMenuItems)
 
-        menu.findItem(R.id.rotation_image).isVisible = showMenuItems
+//         menu.findItem(R.id.rotation_image).isVisible = showMenuItems
 
-        menu.findItem(R.id.gray).title =
-            initialBundle.getString(EdgeDetectionHandler.CROP_BLACK_WHITE_TITLE) as String
-        menu.findItem(R.id.reset).title =
-            initialBundle.getString(EdgeDetectionHandler.CROP_RESET_TITLE) as String
+//         menu.findItem(R.id.gray).title =
+//             initialBundle.getString(EdgeDetectionHandler.CROP_BLACK_WHITE_TITLE) as String
+//         menu.findItem(R.id.reset).title =
+//             initialBundle.getString(EdgeDetectionHandler.CROP_RESET_TITLE) as String
 
         if (showMenuItems) {
             menu.findItem(R.id.action_label).isVisible = true
@@ -101,19 +101,22 @@ class CropActivity : BaseActivity(), ICropView.Proxy {
             System.gc()
             finish()
             return true
-        } else if (item.itemId == R.id.rotation_image) {
-            Log.e(TAG, "Rotate touched!")
-            mPresenter.rotate()
-            return true
-        } else if (item.itemId == R.id.gray) {
-            Log.e(TAG, "Black White touched!")
-            mPresenter.enhance()
-            return true
-        } else if (item.itemId == R.id.reset) {
-            Log.e(TAG, "Reset touched!")
-            mPresenter.reset()
-            return true
-        }
+        } 
+//         else if (item.itemId == R.id.rotation_image) {
+//             Log.e(TAG, "Rotate touched!")
+//             mPresenter.rotate()
+//             return true
+//         } 
+//         else if (item.itemId == R.id.gray) {
+//             Log.e(TAG, "Black White touched!")
+//             mPresenter.enhance()
+//             return true
+//         } 
+//         else if (item.itemId == R.id.reset) {
+//             Log.e(TAG, "Reset touched!")
+//             mPresenter.reset()
+//             return true
+//         }
 
         return super.onOptionsItemSelected(item)
     }
